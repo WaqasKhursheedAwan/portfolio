@@ -23,9 +23,13 @@ const Contact = () => {
          gap-6 max-w-5xl bg-gray-800 md:p-6 p-2 rounded-lg mx-auto"
         >
           <form className="flex flex-col flex-1 gap-5">
-            <input type="text" placeholder="Your Name" />
-            <input type="Email" placeholder="Your Email Address" />
-            <textarea placeholder="Your Message" rows={10}></textarea>
+            <input type="text" placeholder="Your Name" name="to_name" />
+            <input type="Email" placeholder="Your Email Address" name="email" />
+            <textarea
+              placeholder="Your Message"
+              rows={10}
+              name="message"
+            ></textarea>
             <button className="flex lg:text-xl sm:text-lg md:text-base xl:text-xl my-3 border-4 gap-2 rounded-full text-gray-500 border-white px-7 py-4 hover:bg-transparent hover:font-bold hover:text-white w-fit">
               {" "}
               send Message

@@ -28,7 +28,7 @@ function Bar() {
         }`}
       >
         <div className="flex justify-between items-center ">
-          <h1> Waqas Khursheed</h1>
+          <h1> Portfolio</h1>
           <div className="hidden md:block ">
             <ul
               className={`flex text-lg gap-4 bg-white text-gray-900 py-2 px-6 rounded-bl-full

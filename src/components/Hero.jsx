@@ -15,7 +15,7 @@ const Hero = () => {
       <div className="flex flex-wrap justify-around mt-32">
         <div className=" flex-col text-center items-center justify-center">
           <img
-            className=" flex h-auto max-w-lg  rounded-2xl border-2"
+            className=" flex h-auto max-w-md  rounded-2xl border-2"
             src={Picture2}
             alt={Picture2}
           />
