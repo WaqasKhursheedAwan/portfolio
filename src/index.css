@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .nav-link {
+    @apply hover:text-fuchsia-600 hover:font-semibold hover:border-b-2 hover:border-fuchsia-600;
+  }
+  h1 {
+    @apply text-2xl mx-2 hover:text-fuchsia-600 hover:font-bold hover:border-b-2 hover:border-fuchsia-600;
+  }
+  body {
+    @apply box-border bg-[#000000] text-gray-100 font-Poppins mx-2 md:mx-12 lg:mx-32 overflow-x-hidden;
+  }
+}
+
+/* @layer base{
+    input {
+        @apply text-black p-4
+    }
+    button{
+        @apply bg-gray-100 text-gray-900 rounded-full py-1 px-3
+    }
+    html{
+        @apply font-Poppins
+    }
+    body{
+        @apply box-border bg-gray-900 text-gray-100 font-Poppins mx-2 md:mx-12 lg:mx-32
+        }
+    h1{
+            @apply text-2xl mx-2 hover:text-fuchsia-600 hover:font-bold hover:border-b-2 hover:border-fuchsia-600
+        }
+    button {
+        @apply text-gray-900 bg-white w-40 hover:bg-fuchsia-600 hover:text-white hover:font-semibold duration-700 hover:animate-bounce
+    } */
+/* } */
+.btn-primary {
+  @apply bg-cyan-600 font-semibold text-white md:mx-0 mx-auto rounded-full py-3 px-6 flex items-center gap-2;
+}
+input,
+textarea {
+  @apply bg-gray-700 outline-none rounded-lg p-3;
+}
+::placeholder {
+  @apply text-lg;
+}
+
+::selection {
+  @apply bg-cyan-600;
+}
