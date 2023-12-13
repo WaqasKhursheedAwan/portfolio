@@ -1,7 +1,30 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 // import Button from "./Button";
 
 const Contact = () => {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_abyq7pq",
+        "template_rq50hxb",
+        form.current,
+        "M_9JGXXxJuRdNU5I0"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          e.target.reset();
+          alert("Email sent successfully");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
   const contact_info = [
     { logo: "mail", text: "awanw4903@gmail.com" },
     { logo: "logo-whatsapp", text: "0344-9638043" },
@@ -22,7 +45,11 @@ const Contact = () => {
           className="mt-16 flex md:flex-row flex-col
          gap-6 max-w-5xl bg-gray-800 md:p-6 p-2 rounded-lg mx-auto"
         >
-          <form className="flex flex-col flex-1 gap-5">
+          <form
+            className="flex flex-col flex-1 gap-5"
+            ref={form}
+            onSubmit={sendEmail}
+          >
             <input type="text" placeholder="Your Name" name="to_name" />
             <input type="Email" placeholder="Your Email Address" name="email" />
             <textarea
