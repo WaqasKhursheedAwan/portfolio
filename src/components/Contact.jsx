@@ -1,5 +1,7 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 // import Button from "./Button";
 
 const Contact = () => {
@@ -18,7 +20,7 @@ const Contact = () => {
         (result) => {
           console.log(result.text);
           e.target.reset();
-          alert("Email sent successfully");
+          toast("Email sent successfully!");
         },
         (error) => {
           console.log(error.text);

@@ -8,6 +8,7 @@ import {
 
 import Picture2 from "../images/profile.PNG";
 import Button from "./Button";
+import CV from "../cv/waqas.pdf";
 
 const Hero = () => {
   return (
@@ -26,7 +27,7 @@ const Hero = () => {
           <div className="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white text-white font-bold">
             MERN Stack Developer <>. .</>
           </div>
-          <a href="../cv/waqas.pdf" download>
+          <a href={CV} download>
             <Button name="Download My Resume" />
           </a>
 
