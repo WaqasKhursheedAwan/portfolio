@@ -17,21 +17,23 @@ function NavBar() {
     { name: "Contact", link: "#contact" },
   ];
 
-  console.log(menuLinks.map((items)=>{ return items}))
+  console.log(
+    menuLinks.map((items) => {
+      return items;
+    })
+  );
   return (
     <>
-      <nav className="fixed w-full top-0 left-0">
+      <nav className="fixed w-screen top-0 left-0 container">
         <div className="flex justify-between items-center ">
           <h1>Name</h1>
           <div className="hidden md:block ">
             <ul className="flex text-lg gap-4 bg-white text-gray-900 py-2 px-6 rounded-bl-full">
-              {
-                menuLinks.map((items , i)=> (
-                  <li key={i} className="px-6 hover:text-cyan-600">
-                    <a href={items.link}>{items.name} </a>
-                  </li>
-                ))
-              }
+              {menuLinks.map((items, i) => (
+                <li key={i} className="px-6 hover:text-cyan-600">
+                  <a href={items.link}>{items.name} </a>
+                </li>
+              ))}
             </ul>
           </div>
           <div
@@ -51,15 +53,12 @@ function NavBar() {
           isOpen ? "right-0 -z-10" : "right-[-100%]"
         } top-0 absolute h-full w-3/4 bg-slate-200 duration-300 md:hidden `}
       >
-        <ul className="flex flex-col items-center text-lg gap-4 text-gray-900 p-6">
-        {
-                menuLinks.map((items , i)=> (
-                  <li key={i}>
-                    <a href={items.link}>{items.name} </a>
-                  </li>
-                ))
-              }
-         
+        <ul className="flex flex-col items-center justify-center text-lg gap-4 text-gray-900 p-6">
+          {menuLinks.map((items, i) => (
+            <li key={i}>
+              <a href={items.link}>{items.name} </a>
+            </li>
+          ))}
         </ul>
       </div>
     </>

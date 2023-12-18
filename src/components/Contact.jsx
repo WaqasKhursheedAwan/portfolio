@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 // import Button from "./Button";
 
@@ -63,6 +63,7 @@ const Contact = () => {
               {" "}
               send Message
             </button>
+            <ToastContainer />{" "}
           </form>
           <div className="flex flex-col  gap-7 ">
             {contact_info.map((contact, i) => (

@@ -17,7 +17,7 @@ const About = () => {
           {" "}
           My Introduction{" "}
         </p>
-        <p className="text-justify leading-8 text-lg font-thin">
+        <p className="text-justify text-lg font-thin">
           I'm Waqas Khursheed, a MERN stack enthusiast passionate about crafting
           innovative web solutions. With expertise in JavaScript, React.js,
           Node.js, Express.js, and MongoDB, I specialize in building scalable
